@@ -28,4 +28,4 @@ if Check:
     for i in A: # Поиск общего
         if i in B:
             Common.append(i)
-    print(Common)
+    print("Общие: ", Common)
