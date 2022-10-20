@@ -1,4 +1,12 @@
 import random
+
+
+def MakeMassive(Massive, Size):
+    for i in range(Size): # Добавляю в массив рандомные числа
+        number = random.randint(-1000, 1000)/10
+        Massive.append(number)
+    print(Massive)
+
 A = []
 B = []
 Common = []
@@ -15,16 +23,8 @@ except ValueError:
     Check=False
 
 if Check:
-    for i in range(SizeA): # Добавляю в массив A рандомные числа
-        b = random.randint(-1000, 1000)/10
-        A.append(b)
-    print(A)
-
-    for i in range(SizeB): # Добавляю в массив B рандомные числа
-        b = random.randint(-1000, 1000)/10
-        B.append(b)
-    print(B)
-
+    MakeMassive(A, SizeA) # С помощью функции я немного сократил повторяющийся код
+    MakeMassive(B, SizeB)
     for i in A: # Поиск общего
         if i in B:
             Common.append(i)
